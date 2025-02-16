@@ -1,0 +1,43 @@
+html,
+      body {
+        font-family: 'Poppins', sans-serif;
+      }
+      body {
+        background: linear-gradient(135deg, #ffd6e8 0%, #ffe4ed 40%, #f4c2ff 100%);
+        overflow-x: hidden;
+        min-height: 100vh;
+        position: relative;
+      }
+      .hearts-container {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        overflow: hidden;
+        z-index: 0;
+      }
+      .heart {
+        position: absolute;
+        bottom: -40px;
+        font-size: 2rem;
+        color: #ff66a2;
+        opacity: 0.8;
+        animation: floatUp 6s linear infinite;
+      }
+      @keyframes floatUp {
+        0% {
+          transform: translateY(0) rotate(0deg);
+          opacity: 0;
+        }
+        10% {
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(-120vh) rotate(720deg);
+          opacity: 0;
+        }
+      }
+      #faq-content {
+        height: 0;
+        overflow: hidden;
+        transition: height 0.5s ease;
+      }
